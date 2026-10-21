@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============================================================
+       TODO: Replace every {{PLACEHOLDER}} in this file.
+       Search for "{{" to find them all. Full list in README.md.
+       ============================================================ -->
+  <title>{Mashrafi Mohammad} — Computer Science Student &amp; Developer</title>
+  <meta name="description" content="Portfolio of {Mashrafi Mohammad}, a 2nd-year Computer Science student passionate about building software. Projects, hobbies and ways to get in touch." />
+  <meta name="author" content="{Mashrafi Mohammad}" />
+
+  <!-- Open Graph / social sharing (fills in the card shown when you share your link) -->
+  <meta property="og:title" content="{Mashrafi Mohammad} — Computer Science Student &amp; Developer" />
+  <meta property="og:description" content="Portfolio of {Mashrafi Mohammad}, a 2nd-year Computer Science student passionate about building software." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://{{YOUR_DOMAIN}}/" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Fonts (falls back to system fonts if offline) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#home">Skip to content</a>
+
+  <!-- Thin gradient bar showing scroll progress -->
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+
+  <!-- Animated particle background -->
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar" id="navbar">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#home" class="nav-logo" aria-label="Home">
+        <span class="nav-logo-mark">&lt;/&gt;</span>{{YOUR_INITIALS}}
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active"><span class="nav-num">01.</span>Home</a></li>
+        <li><a href="#about" class="nav-link"><span class="nav-num">02.</span>About Me</a></li>
+        <li><a href="#projects" class="nav-link"><span class="nav-num">03.</span>Projects</a></li>
+        <li><a href="#hobbies" class="nav-link"><span class="nav-num">04.</span>Hobbies</a></li>
+        <li><a href="#contact" class="nav-link"><span class="nav-num">05.</span>Contact</a></li>
+        <li><a href="#contact" class="btn btn-outline btn-sm nav-cta">Hire Me</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle light / dark theme" title="Toggle theme">
+          <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button id="navToggle" class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= HOME / HERO ================= -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <p class="hero-hello"><span class="wave" aria-hidden="true">👋</span> Hi, my name is</p>
+          <h1 class="hero-name">{Mashrafi Mohammad}.</h1>
+          <h2 class="hero-role">I'm <span class="typed" id="typedText" data-roles='["a Computer Science student.","an aspiring software engineer.","a curious problem solver.","a lifelong learner."]' aria-hidden="true"></span><span class="caret" aria-hidden="true">&nbsp;</span></h2>
+          <span class="visually-hidden">I'm a Computer Science student.</span>
+          <p class="hero-blurb">
+            I'm a <strong>2nd-year Computer Science undergraduate</strong> at {Islamic University of Technology (IUT), Dhaka},
+            passionate about building things for the web and learning something new every day.
+            Currently exploring {}.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View My Projects</a>
+            <a href="#contact" class="btn btn-outline">Get In Touch</a>
+          </div>
+          <ul class="socials" aria-label="Social links">
+            <!-- TODO: replace the # links and {{GITHUB_USERNAME}} with your real profiles -->
+            <li><a href="https://github.com/{{GITHUB_USERNAME}}" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a></li>
+            <li><a href="https://linkedin.com/in/{{LINKEDIN_USERNAME}}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+            </a></li>
+            <li><a href="mailto:{{YOUR_EMAIL}}" aria-label="Email" title="Email">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a></li>
+          </ul>
+        </div>
+
+        <!-- Floating "code editor" card — edit the details below like real code -->
+        <div class="hero-card reveal" data-delay="150">
+          <div class="code-window" role="img" aria-label="Code snippet describing the site owner">
+            <div class="code-titlebar">
+              <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+              <span class="code-filename">about-me.js</span>
+            </div>
+            <pre class="code-body"><code><span class="tok-kw">const</span> <span class="tok-var">aboutMe</span> = {
+  name: <span class="tok-str">"{Mashrafi Mohammad}"</span>,
+  degree: <span class="tok-str">"BSc Computer Science"</span>,
+  year: <span class="tok-str">"2nd Year"</span>,
+  university: <span class="tok-str">"{Islamic University of Technology (IUT), Dhaka}"</span>,
+  location: <span class="tok-str">"{{CITY_COUNTRY}}"</span>,
+  interests: [<span class="tok-str">"web-dev"</span>, <span class="tok-str">"problem solving"</span>, <span class="tok-str">"{{INTEREST}}"</span>],
+  learning: [<span class="tok-str">"{Data Structures and Algorithms}"</span>],
+  <span class="tok-cmt">// fun fact about me 👇</span>
+  funFact: <span class="tok-str">"{{FUN_FACT}}"</span>,
+};</code></pre>
+          </div>
+          <div class="float-badge badge-top" aria-hidden="true">🚀 2nd Year CS</div>
+          <div class="float-badge badge-bottom" aria-hidden="true">💻 Future Engineer</div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-hint" aria-label="Scroll to About section">
+        <span class="mouse" aria-hidden="true"><span class="wheel"></span></span>
+        scroll
+      </a>
+    </section>
+
+    <!-- ================= ABOUT ME ================= -->
+    <section id="about" class="section">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-tag">// about_me</span>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-photo reveal">
+            <div class="avatar-frame">
+              <!-- TODO: replace this placeholder with your photo:
+                   <img src="assets/me.jpg" alt="Portrait of {Mashrafi Mohammad}" />
+                   (keep the same size, ~320x320 or larger, square) -->
+              <svg viewBox="0 0 200 200" role="img" aria-label="Avatar placeholder — your photo goes here">
+                <defs>
+                  <linearGradient id="avatarGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#a78bfa"/>
+                  </linearGradient>
+                </defs>
+                <rect width="200" height="200" rx="24" fill="url(#avatarGrad)"/>
+                <text id="avatarText" x="100" y="122" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="64" font-weight="700" fill="#0a0e1a">{{YOUR_INITIALS}}</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="about-text">
+            <p class="reveal">
+              Hello! I'm <strong>{Mashrafi Mohammad}</strong>, a second-year <strong>Computer Science</strong>
+              undergraduate at {Islamic University of Technology (IUT), Dhaka}. Write a couple of sentences here about who you
+              are, what excites you about computing, and what kind of developer you want to become.
+            </p>
+            <p class="reveal" data-delay="100">
+              Use this second paragraph for your journey so far — courses you've enjoyed, a club or
+              hackathon you joined, your first "aha!" moment with code, or the area you're
+              specialising in.
+            </p>
+
+            <!-- Quick facts -->
+            <ul class="facts reveal" data-delay="200">
+              <li><span class="fact-label">🎓 Degree</span><span>BSc Computer Science</span></li>
+              <li><span class="fact-label">📅 Year</span><span>2nd Year (Class of {{GRADUATION_YEAR}})</span></li>
+              <li><span class="fact-label">📍 Location</span><span>{{CITY_COUNTRY}}</span></li>
+              <li><span class="fact-label">🗣️ Languages</span><span>{{SPOKEN_LANGUAGES}}</span></li>
+            </ul>
+
+            <!-- Skills — add or remove chips freely -->
+            <div class="skills reveal" data-delay="300">
+              <div class="skill-group">
+                <h3 class="skill-title">Languages</h3>
+                <ul class="chips">
+                  <li class="chip">Python</li><li class="chip">Java</li>
+                  <li class="chip">C</li><li class="chip">JavaScript</li>
+                  <li class="chip">SQL</li>
+                </ul>
+              </div>
+              <div class="skill-group">
+                <h3 class="skill-title">Web &amp; Tools</h3>
+                <ul class="chips">
+                  <li class="chip">HTML &amp; CSS</li><li class="chip">Git &amp; GitHub</li>
+                  <li class="chip">VS Code</li><li class="chip">Linux</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Animated stats — edit the data-count numbers -->
+        <div class="stats reveal">
+          <div class="stat"><span class="stat-num" data-count="10" data-suffix="+">0</span><span class="stat-label">Projects Built</span></div>
+          <div class="stat"><span class="stat-num" data-count="500" data-suffix="+">0</span><span class="stat-label">Hours of Coding</span></div>
+          <div class="stat"><span class="stat-num" data-count="6" data-suffix="">0</span><span class="stat-label">Courses Completed</span></div>
+          <div class="stat"><span class="stat-num" data-count="1000" data-suffix="+">0</span><span class="stat-label">Cups of Coffee</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-tag">// projects</span>
+          <h2 class="section-title">Things I've <span class="gradient-text">Built</span></h2>
+          <p class="section-sub">A selection of coursework, personal and hackathon projects.
+            <!-- TODO: copy a <article class="project-card"> block below to add more projects,
+                 and give it a matching data-category value. -->
+          </p>
+        </header>
+
+        <!-- Filter buttons — data-filter must match the cards' data-category -->
+        <div class="filters reveal" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="app">Apps</button>
+          <button class="filter-btn" data-filter="ml">AI / ML</button>
+          <button class="filter-btn" data-filter="other">Other</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Project 1 -->
+          <article class="project-card tilt reveal" data-category="web">
+            <div class="project-banner banner-1" aria-hidden="true"><span>🌐</span></div>
+            <div class="project-body">
+              <div class="project-top">
+                <svg class="icon project-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg>
+                <div class="project-links">
+                  <a href="https://github.com/{{GITHUB_USERNAME}}/project-1" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub" title="Source code"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                  <a href="#" target="_blank" rel="noopener noreferrer" aria-label="View live demo" title="Live demo"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+                </div>
+              </div>
+              <h3 class="project-title">Project One — Web App</h3>
+              <p class="project-desc">One or two sentences: what the app does, the problem it solves, and the coolest thing you learned while building it.</p>
+              <ul class="chips chips-sm"><li class="chip">HTML</li><li class="chip">CSS</li><li class="chip">JavaScript</li></ul>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card tilt reveal" data-category="app" data-delay="100">
+            <div class="project-banner banner-2" aria-hidden="true"><span>📱</span></div>
+            <div class="project-body">
+              <div class="project-top">
+                <svg class="icon project-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg>
+                <div class="project-links">
+                  <a href="https://github.com/{{GITHUB_USERNAME}}/project-2" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub" title="Source code"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                  <a href="#" target="_blank" rel="noopener noreferrer" aria-label="View live demo" title="Live demo"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+                </div>
+              </div>
+              <h3 class="project-title">Project Two — Mobile App</h3>
+              <p class="project-desc">Describe your mobile or desktop app here. Mention the framework you used and one feature you're proud of.</p>
+              <ul class="chips chips-sm"><li class="chip">Flutter</li><li class="chip">Dart</li><li class="chip">Firebase</li></ul>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card tilt reveal" data-category="ml" data-delay="200">
+            <div class="project-banner banner-3" aria-hidden="true"><span>🤖</span></div>
+            <div class="project-body">
+              <div class="project-top">
+                <svg class="icon project-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg>
+                <div class="project-links">
+                  <a href="https://github.com/{{GITHUB_USERNAME}}/project-3" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub" title="Source code"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                  <a href="#" target="_blank" rel="noopener noreferrer" aria-label="View live demo" title="Live demo"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+                </div>
+              </div>
+              <h3 class="project-title">Project Three — Machine Learning</h3>
+              <p class="project-desc">Describe your ML or data project: the dataset, the model you trained, and the accuracy or insight you achieved.</p>
+              <ul class="chips chips-sm"><li class="chip">Python</li><li class="chip">scikit-learn</li><li class="chip">pandas</li></ul>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card tilt reveal" data-category="web">
+            <div class="project-banner banner-4" aria-hidden="true"><span>🎮</span></div>
+            <div class="project-body">
+              <div class="project-top">
+                <svg class="icon project-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg>
+                <div class="project-links">
+                  <a href="https://github.com/{{GITHUB_USERNAME}}/project-4" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub" title="Source code"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                  <a href="#" target="_blank" rel="noopener noreferrer" aria-label="View live demo" title="Live demo"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+                </div>
+              </div>
+              <h3 class="project-title">Project Four — Game</h3>
+              <p class="project-desc">Built a browser game? Describe the gameplay and the programming concepts it taught you (loops, collision, state…).</p>
+              <ul class="chips chips-sm"><li class="chip">JavaScript</li><li class="chip">Canvas API</li></ul>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project-card tilt reveal" data-category="other" data-delay="100">
+            <div class="project-banner banner-5" aria-hidden="true"><span>🧮</span></div>
+            <div class="project-body">
+              <div class="project-top">
+                <svg class="icon project-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg>
+                <div class="project-links">
+                  <a href="https://github.com/{{GITHUB_USERNAME}}/project-5" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub" title="Source code"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                  <a href="#" target="_blank" rel="noopener noreferrer" aria-label="View live demo" title="Live demo"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+                </div>
+              </div>
+              <h3 class="project-title">Project Five — Algorithms</h3>
+              <p class="project-desc">A coursework or competitive-programming project: what you implemented, and what it taught you about efficiency.</p>
+              <ul class="chips chips-sm"><li class="chip">C++</li><li class="chip">Data Structures</li></ul>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="project-card tilt reveal" data-category="other" data-delay="200">
+            <div class="project-banner banner-6" aria-hidden="true"><span>📈</span></div>
+            <div class="project-body">
+              <div class="project-top">
+                <svg class="icon project-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg>
+                <div class="project-links">
+                  <a href="https://github.com/{{GITHUB_USERNAME}}/project-6" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub" title="Source code"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                  <a href="#" target="_blank" rel="noopener noreferrer" aria-label="View live demo" title="Live demo"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+                </div>
+              </div>
+              <h3 class="project-title">Project Six — Data Visualisation</h3>
+              <p class="project-desc">Turned a dataset into something visual and interactive? Explain the data source and what the dashboard shows.</p>
+              <ul class="chips chips-sm"><li class="chip">Python</li><li class="chip">Matplotlib</li><li class="chip">Jupyter</li></ul>
+            </div>
+          </article>
+        </div>
+
+        <p class="projects-more reveal">
+          Want to see more? Check out my
+          <a href="https://github.com/{{GITHUB_USERNAME}}?tab=repositories" target="_blank" rel="noopener noreferrer" class="link">GitHub&nbsp;→</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= HOBBIES ================= -->
+    <section id="hobbies" class="section">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-tag">// beyond_the_keyboard</span>
+          <h2 class="section-title">Hobbies &amp; <span class="gradient-text">Interests</span></h2>
+          <p class="section-sub">Life outside code. <!-- TODO: swap the emoji cards below for your own hobbies — just copy a card and edit it. --></p>
+        </header>
+
+        <div class="hobbies-grid">
+          <article class="hobby-card reveal">
+            <div class="hobby-icon" aria-hidden="true">🎸</div>
+            <h3>Playing Guitar</h3>
+            <p>One line about this hobby — how long you've done it and what you love about it.</p>
+          </article>
+          <article class="hobby-card reveal" data-delay="80">
+            <div class="hobby-icon" aria-hidden="true">📷</div>
+            <h3>Photography</h3>
+            <p>Street or nature photography on weekends; occasionally posting shots to Instagram.</p>
+          </article>
+          <article class="hobby-card reveal" data-delay="160">
+            <div class="hobby-icon" aria-hidden="true">🎮</div>
+            <h3>Gaming</h3>
+            <p>Strategy and puzzle games — great for unwinding and a sneaky way to practise problem solving.</p>
+          </article>
+          <article class="hobby-card reveal" data-delay="240">
+            <div class="hobby-icon" aria-hidden="true">⚽</div>
+            <h3>Football</h3>
+            <p>Weekly five-a-side with university friends. Fitness, teamwork and a lot of banter.</p>
+          </article>
+          <article class="hobby-card reveal" data-delay="320">
+            <div class="hobby-icon" aria-hidden="true">📖</div>
+            <h3>Reading</h3>
+            <p>Sci-fi and tech books. Add a favourite title or author here.</p>
+          </article>
+          <article class="hobby-card reveal" data-delay="400">
+            <div class="hobby-icon" aria-hidden="true">🧳</div>
+            <h3>Travelling</h3>
+            <p>Exploring new places and cuisines — mention a dream destination if you like.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="section-tag">// contact_me</span>
+          <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+          <p class="section-sub">I'm always happy to talk about projects, internships, or anything tech.
+            Drop a message and I'll get back to you soon!</p>
+        </header>
+
+        <div class="contact-grid">
+          <!-- Contact info -->
+          <div class="contact-info reveal">
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div><h3>Email</h3><a class="link" href="mailto:{{YOUR_EMAIL}}">{{YOUR_EMAIL}}</a></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div><h3>Location</h3><p>{{CITY_COUNTRY}}</p></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <div><h3>Response Time</h3><p>Usually within 24–48 hours</p></div>
+            </div>
+
+            <div class="contact-socials">
+              <a href="https://github.com/{{GITHUB_USERNAME}}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="https://linkedin.com/in/{{LINKEDIN_USERNAME}}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+              </a>
+              <a href="https://x.com/{{TWITTER_USERNAME}}" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact form
+               TODO: to receive real messages, sign up at https://formspree.io,
+               create a form, and replace {{FORM_ID}} below with your form ID.
+               Until then the form runs in "demo mode" (see README). -->
+          <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/{{FORM_ID}}" method="POST" novalidate data-delay="150">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required />
+                <span class="error-msg" aria-live="polite"></span>
+              </div>
+              <div class="form-field">
+                <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+                <span class="error-msg" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="subject">Subject <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="subject" name="subject" placeholder="What is this about?" required />
+              <span class="error-msg" aria-live="polite"></span>
+            </div>
+            <div class="form-field">
+              <label for="message">Message <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" rows="5" placeholder="Write your message here…" required></textarea>
+              <span class="error-msg" aria-live="polite"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+              <span class="btn-label">Send Message</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+            </button>
+            <p class="form-note">This form is wired to <a class="link" href="https://formspree.io" target="_blank" rel="noopener noreferrer">Formspree</a> — see the README to activate it.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <p>Designed &amp; built with ❤️ by <strong>{Mashrafi Mohammad}</strong></p>
+      <p class="footer-meta">© <span id="year">2026</span> · All rights reserved</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="backToTop" class="icon-btn back-to-top" aria-label="Back to top" title="Back to top">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+  <!-- Toast notifications -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
